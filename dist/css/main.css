@@ -1,0 +1,9 @@
+.img-stack {
+    height: 100px;
+}
+.img-stack:hover {
+    cursor: pointer;
+}
+.tech-stack-section {
+    text-align: center;
+}
