@@ -16,23 +16,6 @@ class CoreLayout extends React.Component {
             <a className='navbar-brand' href='/Resume.pdf' download>Download Resume</a>
           </div>
           {/* Collect the nav links, forms, and other content for toggling */}
-          <div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-            <ul className='nav navbar-nav navbar-right'>
-              <li>
-                <a href='index.html'>Home</a>
-              </li>
-              <li>
-                <a href='about.html'>Projects</a>
-              </li>
-              <li>
-                <a href='post.html'>Blog</a>
-              </li>           
-              <li>
-                <a href='contact.html'>Contact</a>
-              </li>
-            </ul>
-          </div>
-          {/* navbar-collapse */}
         </div>
         {/* .container */}
       </nav>
