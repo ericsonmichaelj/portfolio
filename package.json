@@ -6,17 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "better-npm-run start",
-    "start:production": "better-npm-run start:production",
-    "compile:production": "better-npm-run compile:production"
+    "start:dev": "better-npm-run start:production",
+    "compile:production": "better-npm-run compile:production",
+    "postinstall": "npm run compile:production"
   },
   "betterScripts": {
-    "start": {
-      "command": "node server",
+    "start:dev": {
+      "command": "nodemon server",
       "env": {
         "NODE_ENV": "development"
       }
     },
-    "start:production": {
+    "start:": {
       "command": "node server",
       "env": {
         "NODE_ENV": "production"

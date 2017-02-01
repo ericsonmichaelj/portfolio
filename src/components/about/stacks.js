@@ -24,7 +24,7 @@ const Stack = ({ url, title, image, skill, numOfCol }) =>
   (
     <div className={`col-sm-${numOfCol}`}>
       <h3>{title}</h3>
-      <a href={url} target='_blank'>
+      <a href={url} target='_blank' rel='noopener noreferrer'>
         <img className='img-stack' src={`img/stacks/${image}`} alt={title} />
       </a>
       <div><p><b>Skill Level:</b> {skill} </p></div>
@@ -45,10 +45,10 @@ const Stacks = () => (
       value => <StackTypes stackTypeValue={value} key={value} />
     )}
     <p style={{ textAlign: 'left' }}><b>Note:</b> This is by no means an exhaustive list of all the technologies,
-    libraries, frameworks, or programming languages that I have used in the past. 
+    libraries, frameworks, or programming languages that I have used in the past.{' '}
     Please inquire if there&apos;s work
     that you or your company needs done on a technology not listed there.
-     I am also open to learning about new technologies as well. </p>
+     I am also open to learning new technologies as well. </p>
   </div>
 )
 
