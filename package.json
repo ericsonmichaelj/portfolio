@@ -5,22 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "better-npm-run start",
-    "start:dev": "better-npm-run start:production",
-    "compile:production": "better-npm-run compile:production",
-    "postinstall": "npm run compile:production"
+    "start:dev": "better-npm-run start:dev",
+    "start": "node server.js",
+    "compile:production": "better-npm-run compile:production"
   },
   "betterScripts": {
     "start:dev": {
       "command": "nodemon server",
       "env": {
         "NODE_ENV": "development"
-      }
-    },
-    "start:": {
-      "command": "node server",
-      "env": {
-        "NODE_ENV": "production"
       }
     },
     "compile:production": {
@@ -43,7 +36,9 @@
     "dotenv": "^4.0.0",
     "express": "^4.14.0",
     "react": "^15.4.0",
-    "react-dom": "^15.4.0"
+    "react-dom": "^15.4.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
   "devDependencies": {
     "eslint": "^3.10.2",
@@ -51,9 +46,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.7.1",
-    "react-hot-loader": "^3.0.0-beta.6",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "react-hot-loader": "^3.0.0-beta.6"
   },
   "babel": {
     "presets": [
