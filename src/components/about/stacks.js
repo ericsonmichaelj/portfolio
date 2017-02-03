@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import stacks, { stackTypes } from '../../constants/stacks'
+import _ from 'underscore'
 
 const StackTypes = (props) => {
   const maxColumnsInBootstrap = 12
@@ -41,7 +42,7 @@ Stack.propTypes = {
 const Stacks = () => (
   <div className='container tech-stack-section'>
     <h1 style={{ marginBottom: '1.5em' }}>My Tech Stack</h1>
-    { Object.values(stackTypes).map(
+    { _(stackTypes).map(
       value => <StackTypes stackTypeValue={value} key={value} />
     )}
     <p style={{ textAlign: 'left' }}><b>Note:</b> This is by no means an exhaustive list of all the technologies,
